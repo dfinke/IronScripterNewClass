@@ -15,14 +15,7 @@ Takes an instance of an object and creates a PowerShell class definition.
 
 
 ```powershell
-$UserMethod = @"
-    [string] WrittenBy() {
-        return "PowerShell Tool Bulider"
-    }
-"@
 
-
-New-ClassDefinition -InputObject (gsv)[0] -ExcludeProperty CanPauseAndContinue,Status -UserMethod $UserMethod
 ```
 
 Creates
