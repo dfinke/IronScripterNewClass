@@ -35,10 +35,9 @@ if (!$ctor) {
 "@
 }
 
-$propertyNames = $InputObject.psobject.properties | 
-Where-Object { $_.MemberType -eq 'property' -and $_.name -notin $ExcludeProperty }
+$propertyNames = $InputObject.psobject.properties | Where-Object { $_.MemberType -eq 'property' -and $_.name -notin $ExcludeProperty }
   
-$classProperties = foreach ($property in $propertyNames | sort Name) {
+$classProperties = foreach ($property in $propertyNames | Sort-Object Name) {
     "`t[{0}]`${1}`n" -f $property.TypeNameOfValue, $property.Name        
 }
 
