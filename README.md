@@ -10,7 +10,7 @@ Takes an instance of an object and creates a PowerShell class definition.
 - Placeholder for a constructor
 - Letting the user specify a constructor
 - Letting the user specify a method
-- VSCode aware and inserts the new class automatically into the current file
+- VSCode aware and inserts the new class automatically into a new file
 - Is cross-platform
 
 
