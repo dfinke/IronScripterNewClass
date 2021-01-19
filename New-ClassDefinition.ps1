@@ -44,10 +44,10 @@ $classProperties = foreach ($property in $propertyNames | sort Name) {
 
 $definition = @"
 class $ClassName {
+    
+$classProperties
 
 $ctor
-
-$classProperties
 
 $UserMethod
 }

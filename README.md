@@ -33,16 +33,16 @@ $params = @{
 Creates
 
 ```powershell
+
 class MyServiceController {
-
-    MyServiceController() {
-        #ctor
-    }
-
-	[System.Boolean]$CanShutdown
+    
+	[System.String]$BinaryPathName
+ 	[System.Boolean]$CanShutdown
  	[System.Boolean]$CanStop
  	[System.ComponentModel.IContainer]$Container
+ 	[System.Boolean]$DelayedAutoStart
  	[System.ServiceProcess.ServiceController[]]$DependentServices
+ 	[System.String]$Description
  	[System.String]$DisplayName
  	[System.String]$MachineName
  	[System.Runtime.InteropServices.SafeHandle]$ServiceHandle
@@ -51,10 +51,16 @@ class MyServiceController {
  	[System.ServiceProcess.ServiceType]$ServiceType
  	[System.ComponentModel.ISite]$Site
  	[System.ServiceProcess.ServiceStartMode]$StartType
+ 	[Microsoft.PowerShell.Commands.ServiceStartupType]$StartupType
+ 	[System.String]$UserName
 
+
+    MyServiceController() {
+        #ctor
+    }
 
     [string] WrittenBy() {
-        return "PowerShell Tool Bulider"
+        return "PowerShell Tool Builder"
     }
 }
 
