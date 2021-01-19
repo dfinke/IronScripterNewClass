@@ -34,8 +34,7 @@ Creates
 
 ```powershell
 
-class MyServiceController {
-    
+class MyServiceController {   
    
     [System.String]$BinaryPathName
     [System.Boolean]$CanShutdown
