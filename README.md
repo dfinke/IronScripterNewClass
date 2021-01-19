@@ -8,14 +8,26 @@ Takes an instance of an object and creates a PowerShell class definition.
 - Scaffolds only property names
 - Allows the user to exclude properties
 - Placeholder for a constructor
-- Lettting the user specify a constructor
+- Letting the user specify a constructor
 - Letting the user specify a method
 - VSCode aware and inserts the new class automatically into the current file
 - Is cross-platform
 
 
 ```powershell
+$UserMethod = @"
+    [string] WrittenBy() {
+        return "PowerShell Tool Builder"
+    }
+"@
 
+$params = @{
+    InputObject     = (Get-Service)[0]
+    UserMethod      = $UserMethod
+    ExcludeProperty = 'CanPauseAndContinue','Status'
+}
+
+.\New-ClassDefinition.ps1  @params
 ```
 
 Creates
